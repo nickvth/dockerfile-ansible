@@ -6,7 +6,7 @@ Tested with boot2docker on OSX and virtualbox with Centos
 
 With this docker image you can create a temporary container to run ansible(-playbook), after ansible is finished the container will be removed automatically. 
 
-<b>Usage</b>
+**Usage**
 
 * Build
 ```
