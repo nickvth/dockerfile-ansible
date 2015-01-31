@@ -1,6 +1,7 @@
 # dockerfile-ansible
 
 Tested with boot2docker on OSX and virtualbox with Centos
+
 * boot2docker: http://boot2docker.io
 * Centos: https://docs.docker.com/installation/centos/
 
@@ -36,6 +37,7 @@ ansible-playbook --help
 ```
 
 Set your alias in .bash_profile, so when you login the alias will be available
+
 * OSX: http://www.maclife.com/article/columns/terminal_101_creating_aliases_commands
 * Centos: http://shapeshed.com/using_aliases_in_the_linux_shell/
 * You can also make changes on the ansible.cfg and rebuild image if you want.
