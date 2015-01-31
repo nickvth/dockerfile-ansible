@@ -19,12 +19,11 @@ docker build --force-rm=true --no-cache=true -t [username]/ansible .
 # mkdir /mnt/ansible
 </pre>
 * Create aliases on your linux based system and test ansible
-
 <pre>
-# alias ansible='docker run --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible'
+# alias ansible='docker run -it --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible'
 # ansible --version
 # ansible -i /mnt/hosts testansible -m setup 
-# alias ansible-playbook='docker run --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible-playbook'
+# alias ansible-playbook='docker run -it --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible-playbook'
 # ansible-playbook --version
 </pre>
 
@@ -32,11 +31,5 @@ Set your alias in .bash_profile, so when you login the alias will be available
 * OSX: http://www.maclife.com/article/columns/terminal_101_creating_aliases_commands
 * Centos: http://shapeshed.com/using_aliases_in_the_linux_shell/
 
-<b>If you want to add an ansible.cfg file then add that to the Dockerfile</b>
+* You can also make changes on the ansible.cfg if you want.
 
-* place ansible.cfg in the build dir
-* vi Dockerfile and add:
-<pre>
-ADD ansible.cfg /etc/ansible.cfg
-</pre>
-* build new image, see command above.
