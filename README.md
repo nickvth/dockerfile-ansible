@@ -22,11 +22,11 @@ docker build --force-rm=true --no-cache=true -t [username]/ansible .
 </pre>
 * Create aliases on your linux based system and test ansible
 <pre>
-# alias ansible='docker run -it --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible'
+# alias ansible='docker run -it --rm=true -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible'
 # ansible --version
 # ansible --help
 # ansible -i /mnt/hosts testansible -k -m setup 
-# alias ansible-playbook='docker run -it --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible-playbook'
+# alias ansible-playbook='docker run -it --rm=true -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible-playbook'
 # ansible-playbook --version
 # ansible-playbook --help
 </pre>
