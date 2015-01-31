@@ -19,7 +19,7 @@ Create aliases on your linux based system and test ansible
 # ansible-playbook --version
 </pre>
 
-Set your alias in .bash_profile, so when you login then alias is direct available.
+Set your alias in .bash_profile, so when you login the alias will be available.
 * OSX: http://www.maclife.com/article/columns/terminal_101_creating_aliases_commands
 * Centos: http://shapeshed.com/using_aliases_in_the_linux_shell/
 
