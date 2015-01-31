@@ -1,5 +1,7 @@
 # dockerfile-ansible
 
+Tested with boot2docker on OSX and virtualbox with Centos
+
 <b>Usage</b>
 
 <pre>
@@ -9,7 +11,7 @@ cd dockerfile-ansible
 docker build --force-rm=true --no-cache=true -t [username]/ansible .
 </pre>
 
-Create aliases on your linux system and test ansible
+Create aliases on your linux based system and test ansible
 <pre>
 # alias ansible='docker run --rm=true --name=ansible [username]/ansible /usr/bin/ansible'
 # ansible --version
