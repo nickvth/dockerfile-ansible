@@ -14,7 +14,7 @@ cd dockerfile-ansible
 docker build --force-rm=true --no-cache=true -t [username]/ansible .
 </pre>
 
-* Create dir voor ansible playbook and inventory files
+* Create dir for ansible playbook and inventory file
 <pre>
 # mkdir /mnt/ansible
 </pre>
