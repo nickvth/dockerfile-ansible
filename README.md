@@ -6,6 +6,7 @@ Tested with boot2docker on OSX and virtualbox with Centos
 
 <b>Usage</b>
 
+* Build
 <pre>
 cd /tmp/
 git clone https://github.com/nickvth/dockerfile-ansible.git 
@@ -13,8 +14,8 @@ cd dockerfile-ansible
 docker build --force-rm=true --no-cache=true -t [username]/ansible .
 </pre>
 
-Create dir voor ansible playbook and inventory files
-Create aliases on your linux based system and test ansible
+* Create dir voor ansible playbook and inventory files
+* Create aliases on your linux based system and test ansible
 <pre>
 # mkdir /mnt/ansible
 # alias ansible='docker run --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible'
@@ -34,4 +35,4 @@ Set your alias in .bash_profile, so when you login the alias will be available
 <pre>
 ADD ansible.cfg /etc/ansible.cfg
 </pre>
-* build new image see command above.
+* build new image, see command above.
