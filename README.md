@@ -1,7 +1,8 @@
 # dockerfile-ansible
 
 Tested with boot2docker on OSX and virtualbox with Centos
-
+* boot2docker: http://boot2docker.io
+* Centos: https://docs.docker.com/installation/centos/
 <b>Usage</b>
 
 <pre>
