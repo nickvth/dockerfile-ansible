@@ -4,6 +4,7 @@ Tested with boot2docker on OSX and virtualbox with Centos
 
 * boot2docker: http://boot2docker.io
 * Centos: https://docs.docker.com/installation/centos/
+* Docker Automated Build: https://registry.hub.docker.com/u/nickvth/dockerfile-ansible/
 
 With this docker image you can create a temporary container to run ansible(-playbook), after ansible is finished the container will be removed automatically. 
 
