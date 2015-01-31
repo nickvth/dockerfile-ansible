@@ -23,6 +23,7 @@ docker build --force-rm=true --no-cache=true -t [username]/ansible .
 <pre>
 # alias ansible='docker run --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible'
 # ansible --version
+# ansible -i /mnt/hosts testansible -m setup 
 # alias ansible-playbook='docker run --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible-playbook'
 # ansible-playbook --version
 </pre>
