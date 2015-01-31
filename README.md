@@ -19,10 +19,13 @@ Create aliases on your linux based system and test ansible
 # ansible-playbook --version
 </pre>
 
+Set your alias in .bash_profile, so when you login then alias is direct available.
+* OSX: http://www.maclife.com/article/columns/terminal_101_creating_aliases_commands
+* Centos: http://shapeshed.com/using_aliases_in_the_linux_shell/
+
 <b>If you want to add an ansible.cfg file then add that to the Dockerfile</b>
 
 * place ansible.cfg in the build dir
-
 * vi Dockerfile and add:
 <pre>
 ADD ansible.cfg /etc/ansible.cfg
