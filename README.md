@@ -16,6 +16,7 @@ docker build --force-rm=true --no-cache=true -t [username]/ansible .
 
 * Create dir voor ansible playbook and inventory files
 * Create aliases on your linux based system and test ansible
+
 <pre>
 # mkdir /mnt/ansible
 # alias ansible='docker run --rm=true --name=ansible -v /mnt/ansible:/mnt [username]/ansible /usr/bin/ansible'
