@@ -12,5 +12,7 @@ RUN yum -y install http://mirror.proserve.nl/fedora-epel/7/x86_64/e/epel-release
 RUN yum -y install ansible openssh openssh-clients sshpass
 RUN mkdir /root/.ssh && chown 640 /root/.ssh
 ADD ansible.cfg /etc/ansible/ansible.cfg
+ADD ssh-agent.sh /ssh-agent.sh
+RUN chmod +x /ssh-agent.sh
 
-CMD ["ssh-agent bash && ssh-add /root/.ssh/id_rsa "]
+ENTRYPOINT ["/ssh-agent.sh"]
