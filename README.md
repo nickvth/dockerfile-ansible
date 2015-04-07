@@ -29,14 +29,23 @@ mkdir -p /mnt/ansible
 * Create aliases on your linux based system and test ansible
 ```
 alias ansible='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /usr/bin/ansible'
+alias ssh-agent-ansible='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /bin/sh /ssh-agent.sh && /usr/bin/ansible'
 ansible --version
 ansible --help
-ansible -i /mnt/hosts testansible -k -m setup 
+# When using ssh password for mulitple hosts
+ssh-agent-ansible --version
+ssh-agent-ansible --help
+# Example
+ansible -i /mnt/hosts testansible -u root -m setup
+ssh-agent-ansible -i /mnt/hosts testansible -k -u root  -m setup
 alias ansible-playbook='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /usr/bin/ansible-playbook'
-alias ssh-agent-ansible='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /bin/sh /ssh-agent.sh && /usr/bin/ansible'
+
 alias ssh-agent-ansible-playbook='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /bin/sh /ssh-agent.sh && /usr/bin/ansible-playbook'
 ansible-playbook --version
 ansible-playbook --help
+# When using ssh password for mulitple hosts
+ssh-agent-ansible-playbook --version
+ssh-agent-ansible-playbook --help
 ```
 
 Set your alias in .bash_profile, so when you login the alias will be available
