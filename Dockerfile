@@ -15,4 +15,4 @@ ADD ansible.cfg /etc/ansible/ansible.cfg
 ADD ssh-agent.sh /ssh-agent.sh
 RUN chmod +x /ssh-agent.sh
 
-ENTRYPOINT ["/ssh-agent.sh"]
+CMD ["ansible --version"]
