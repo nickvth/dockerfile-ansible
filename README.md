@@ -33,6 +33,8 @@ ansible --version
 ansible --help
 ansible -i /mnt/hosts testansible -k -m setup 
 alias ansible-playbook='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /usr/bin/ansible-playbook'
+alias ssh-agent-ansible='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /bin/sh /ssh-agent.sh && /usr/bin/ansible'
+alias ssh-agent-ansible-playbook='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /bin/sh /ssh-agent.sh && /usr/bin/ansible-playbook'
 ansible-playbook --version
 ansible-playbook --help
 ```
