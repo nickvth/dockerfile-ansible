@@ -38,7 +38,7 @@ ansible-playbook --version
 ansible-playbook --help
 ```
 
-* ssh-agent needed and mount playbook inside the container
+* ssh-agent needed for ssh password and mount playbook inside the container
 ```
 docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /bin/sh /ssh-agent.sh
 [root@9d2cfb509f0e /]#ansible --version
