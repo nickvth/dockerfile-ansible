@@ -9,7 +9,7 @@ RUN yum -y update
 
 # Install needed packages.
 RUN yum -y install epel-release 
-RUN yum -y install ansible openssh openssh-clients sshpass
+RUN yum -y install ansible openssh openssh-clients sshpass; yum clean all
 RUN mkdir /root/.ssh && chown 640 /root/.ssh
 ADD ansible.cfg /etc/ansible/ansible.cfg
 ADD ssh-agent.sh /ssh-agent.sh
