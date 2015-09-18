@@ -32,7 +32,7 @@ alias ansible='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-
 ansible --version
 ansible --help
 # Example
-ansible -i /mnt/hosts testansible -u root -m setup
+ansible -i hosts testansible -u root -m setup
 alias ansible-playbook='docker run -it --rm=true -v /mnt/ansible:/mnt nickvth/dockerfile-ansible /usr/bin/ansible-playbook'
 ansible-playbook --version
 ansible-playbook --help
