@@ -8,11 +8,11 @@ MAINTAINER nickvth
 RUN yum -y update
 
 # Install needed packages.
-RUN yum -y install http://mirror.proserve.nl/fedora-epel/7/x86_64/e/epel-release-7-5.noarch.rpm 
+RUN yum -y install epel-release 
 RUN yum -y install ansible openssh openssh-clients sshpass
 RUN mkdir /root/.ssh && chown 640 /root/.ssh
 ADD ansible.cfg /etc/ansible/ansible.cfg
 ADD ssh-agent.sh /ssh-agent.sh
 RUN chmod +x /ssh-agent.sh
-
+WORKDIR /mnt
 CMD ["ansible --version"]
